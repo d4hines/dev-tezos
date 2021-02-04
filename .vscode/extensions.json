@@ -1,9 +1,6 @@
 {
     "recommendations": [
-        "ms-vsliveshare.vsliveshare",
-        "eamodio.gitlens-insiders",
         "wayou.vscode-todo-highlight",
         "ms-vscode-remote.vscode-remote-extensionpack",
-        "ocamllabs.ocaml-platform"
     ]
 }

@@ -9,5 +9,11 @@
     "search.exclude": {
         "src/proto_0**": true
     },
-    "git.autofetch": true
+    "git.autofetch": true,
+    "remote.SSH.defaultExtensions": [
+        "ms-vsliveshare.vsliveshare",
+        "eamodio.gitlens-insiders",
+        "ocamllabs.ocaml-platform",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+    ]
 }
