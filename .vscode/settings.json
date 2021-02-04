@@ -1,0 +1,13 @@
+{
+    "ocaml.sandbox": {
+        "kind": "opam",
+        "switch": "${workspaceFolder:tezos}"
+    },
+    "files.exclude": {
+        "src/proto_0**": true
+    },
+    "search.exclude": {
+        "src/proto_0**": true
+    },
+    "git.autofetch": true
+}
