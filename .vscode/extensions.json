@@ -2,5 +2,7 @@
     "recommendations": [
         "wayou.vscode-todo-highlight",
         "ms-vscode-remote.vscode-remote-extensionpack",
+        "gitlab.gitlab-workflow",
+        "ziyasal.vscode-open-in-github"
     ]
 }
