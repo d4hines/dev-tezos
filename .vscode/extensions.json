@@ -1,13 +1,15 @@
 {
     "recommendations": [
-        "wayou.vscode-todo-highlight",
-        "ms-vscode-remote.vscode-remote-extensionpack",
-        "ms-vsliveshare.vsliveshare",
+        // Essentials
         "eamodio.gitlens",
-        "ocamllabs.ocaml-platform",
-        "ms-vscode-remote.vscode-remote-extensionpack",
         "streetsidesoftware.code-spell-checker",
+        "ms-vsliveshare.vsliveshare",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        // OCaml
+        "ocamllabs.ocaml-platform",
+        // Extras
         "ryuta46.multi-command",
+        "wayou.vscode-todo-highlight",
         "ziyasal.vscode-open-in-github"
     ]
 }
