@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Running Make fmt to check for formatting/linting errors"
+make fmt
+echo "Format is ok 👍"

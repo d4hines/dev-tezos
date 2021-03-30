@@ -2,5 +2,11 @@
     "recommendations": [
         "wayou.vscode-todo-highlight",
         "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vsliveshare.vsliveshare",
+        "eamodio.gitlens",
+        "ocamllabs.ocaml-platform",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "streetsidesoftware.code-spell-checker",
+        "ryuta46.multi-command"
     ]
 }

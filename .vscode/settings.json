@@ -10,10 +10,14 @@
         "src/proto_0**": true
     },
     "git.autofetch": true,
-    "remote.SSH.defaultExtensions": [
-        "ms-vsliveshare.vsliveshare",
-        "eamodio.gitlens-insiders",
-        "ocamllabs.ocaml-platform",
-        "ms-vscode-remote.vscode-remote-extensionpack",
-    ]
+    "cSpell.words": [
+        "Tezos"
+    ],
+    "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "ocaml.repl.path": "dune",
+    "ocaml.repl.args": [
+        "utop"
+    ],
+    "restructuredtext.confPath": "${workspaceFolder}/docs"
 }
