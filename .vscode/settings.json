@@ -1,7 +1,7 @@
 {
     "ocaml.sandbox": {
-        "kind": "opam",
-        "switch": "${workspaceFolder:tezos}"
+        "kind": "esy",
+        "root": "${workspaceFolder:tezos}"
     },
     "files.exclude": {
         "src/proto_0**": true
