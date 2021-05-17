@@ -4,8 +4,8 @@ P=$(pwd)
 cd ../tezos
 
 echo "Adding hooks to local Git db..."
-rm -f .git/hooks/pre-push
-ln -s $P/hooks/pre-push .git/hooks/pre-push
+rm -f .git/hooks/pre-commit
+ln -s $P/hooks/pre-commit .git/hooks/pre-commit
 
 echo "Changing local Git excludes..."
 rm -f .git/info/exclude

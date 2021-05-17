@@ -1,5 +1,5 @@
 #!/bin/sh
 
 echo "Running Make fmt to check for formatting/linting errors"
-make fmt
+make fmt-ocaml
 echo "Format is ok 👍"
