@@ -1,5 +1,10 @@
 #!/bin/sh
 
+set -e
+
 echo "Running Make fmt to check for formatting/linting errors"
+eval $(opam env)
 make fmt-ocaml
 echo "Format is ok 👍"
+
+git add -A
