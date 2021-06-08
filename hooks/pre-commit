@@ -2,9 +2,24 @@
 
 set -e
 
-echo "Running Make fmt to check for formatting/linting errors"
+echo "Running ./src/tooling/lint.sh to check for formatting/linting errors"
 eval $(opam env)
-make fmt-ocaml
+
+staged=$(git diff --name-only --cached)
+
+if [ -z staged ]; then
+    echo "$staged" \
+    | grep -P '.*\.ml(i)?' \
+    | xargs ./src/tooling/lint.sh --format
+
+    git add "$staged"
+
+    # lint.sh outputs .ocamlformat in the root. Quick hack to get rid of it
+    if [ -n "$(git status --porcelain | grep '?? .ocamlformat')" ];
+    then
+        rm .ocamlformat 2> /dev/null
+    fi
+fi
+
 echo "Format is ok 👍"
 
-git add -A
