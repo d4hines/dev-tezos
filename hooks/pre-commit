@@ -1,25 +1,25 @@
-#!/bin/sh
+# #!/bin/sh
 
-set -e
+# set -e
 
-echo "Running ./src/tooling/lint.sh to check for formatting/linting errors"
-eval $(opam env)
+# echo "Running ./src/tooling/lint.sh to check for formatting/linting errors"
+# eval $(opam env)
 
-staged=$(git diff --name-only --cached)
+# staged=$(git diff --name-only)
 
-if [ -z staged ]; then
-    echo "$staged" \
-    | grep -P '.*\.ml(i)?' \
-    | xargs ./src/tooling/lint.sh --format
+# if [ -z staged ]; then
+#     # echo "$staged" \
+#     # | grep -P '.*\.ml(i)?' \
+#     # | xargs ./src/tooling/lint.sh --format
 
-    git add "$staged"
+#     # git add "$staged"
 
-    # lint.sh outputs .ocamlformat in the root. Quick hack to get rid of it
-    if [ -n "$(git status --porcelain | grep '?? .ocamlformat')" ];
-    then
-        rm .ocamlformat 2> /dev/null
-    fi
-fi
+#     # # lint.sh outputs .ocamlformat in the root. Quick hack to get rid of it
+#     # if [ -n "$(git status --porcelain | grep '?? .ocamlformat')" ];
+#     # then
+#     #     rm .ocamlformat 2> /dev/null
+#     # fi
+# fi
 
-echo "Format is ok 👍"
+# echo "Format is ok 👍"
 
