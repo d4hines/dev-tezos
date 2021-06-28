@@ -1,8 +1,4 @@
 {
-    "ocaml.sandbox": {
-        "kind": "opam",
-        "switch": "${workspaceFolder:tezos}"
-    },
     "files.exclude": {
         "src/proto_0**": true
     },
@@ -19,5 +15,9 @@
     "ocaml.repl.args": [
         "utop"
     ],
-    "restructuredtext.confPath": "${workspaceFolder}/docs"
+    "restructuredtext.confPath": "${workspaceFolder}/docs",
+    "ocaml.sandbox": {
+        "kind": "global"
+    },
+    "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix"
 }
