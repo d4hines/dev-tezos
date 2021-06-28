@@ -17,7 +17,8 @@
     ],
     "restructuredtext.confPath": "${workspaceFolder}/docs",
     "ocaml.sandbox": {
-        "kind": "global"
+        "kind": "custom",
+        "template": "nix-shell --arg editor-mode true --run '$prog $args'"
     },
     "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix"
 }

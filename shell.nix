@@ -1,3 +1,4 @@
+{ editor-mode ? false }:
 let
   pkgs = import ./nix/sources.nix { };
   inherit (pkgs) lib;
@@ -18,7 +19,16 @@ with pkgs;
 
 (mkShell {
   inputsFrom = lib.attrValues tezosDrvs;
-  buildInputs = with ocamlPackages; [ utop fswatch redemon ppx_let_locs lsp jsonrpc ocaml-lsp odoc ];
+  buildInputs =
+    with ocamlPackages;
+    let both = [ocamlformat_0_18_0]; in
+    (if editor-mode then [ ocaml-lsp ] ++ both else
+    [
+      (odoc.override {
+        beta_version = true;
+      })
+      dream-serve
+    ]) ++ [ utop ] ++ both;
 }).overrideAttrs (o: {
   propagatedBuildInputs = filterDrvs o.propagatedBuildInputs;
   buildInputs = filterDrvs o.buildInputs;

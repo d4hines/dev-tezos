@@ -22,8 +22,9 @@ shell.nix
 
 echo "Adding Nix..."
 rm -rf ./nix
-cp -r $P/nix .
-cp $P/shell.nix ./shell.nix
+rm -rf ./shell.nix
+ln -s $P/nix $(pwd)
+ln -s $P/shell.nix $(pwd)
 
 echo "Adding .vscode settings..."
 rm -rf .vscode
