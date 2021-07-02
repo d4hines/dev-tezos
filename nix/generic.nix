@@ -1217,7 +1217,7 @@ rec {
 
     # TODO: Don't be so hacky
     shellHook = ''
-      export OPAM_SWITCH_PREFIX="${ocamlPackages.tezos-rust-libs}/lib/ocaml/4.10.2/site-lib"
+      export OPAM_SWITCH_PREFIX="${ocamlPackages.tezos-rust-libs}/lib/ocaml/${ocamlPackages.ocaml.version}/site-lib"
     '';
   };
 
