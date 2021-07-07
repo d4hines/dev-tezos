@@ -1,0 +1,25 @@
+diff --git a/Makefile b/Makefile
+index 30834411e..7bc393242 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,8 +3,6 @@ PACKAGES:=$(patsubst %.opam,%,$(notdir $(shell find src vendors -name \*.opam -p
+ active_protocol_versions := $(shell cat active_protocol_versions)
+ active_protocol_directories := $(shell tr -- - _ < active_protocol_versions)
+ 
+-current_opam_version := $(shell opam --version)
+-include scripts/version.sh
+ 
+ DOCKER_IMAGE_NAME := tezos
+ DOCKER_IMAGE_VERSION := latest
+@@ -18,11 +16,6 @@ DOCKER_DEPS_IMAGE_NAME := registry.gitlab.com/tezos/opam-repository
+ DOCKER_DEPS_IMAGE_VERSION := ${opam_repository_tag}
+ DOCKER_DEPS_MINIMAL_IMAGE_VERSION := minimal--${opam_repository_tag}
+ COVERAGE_REPORT := _coverage_report
+-MERLIN_INSTALLED := $(shell opam list merlin --installed --silent 2> /dev/null; echo $$?)
+-
+-ifeq ($(filter ${opam_version}.%,${current_opam_version}),)
+-$(error Unexpected opam version (found: ${current_opam_version}, expected: ${opam_version}.*))
+-endif
+ 
+ current_ocaml_version := $(shell opam exec -- ocamlc -version)
+ 
